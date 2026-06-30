@@ -59,3 +59,12 @@ Dashboard/
 * Configuração da conexão com o banco
 * Realização da Migration Inicial + Criação da Entidade Chamado
 
+
+### Dia 03 - Implementando Services
+
+#### Atividades realizadas
+
+* Implementação métodos de criação para usuário, categoria e chamado
+* Criação das tabelas: usuário, categoria e chamado no banco
+* Criação do Enum para o status da classe Chamado
+
