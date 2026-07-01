@@ -23,5 +23,10 @@ namespace Dashboard.Services
             _context.Chamados.Add(novoChamado);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<Chamado>> BuscarTodosAsync()
+        {
+            return await _context.Chamados.ToListAsync();
+        }
     }
 }

@@ -15,5 +15,11 @@ namespace Dashboard.Controllers
             return Ok();
         }
 
+        [HttpGet]
+        public async Task<IActionResult> BuscarTodos()
+        {
+            var chamados = await chamadoService.BuscarTodosAsync();
+            return Ok(chamados);
+        }
     }
 }
