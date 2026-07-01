@@ -68,3 +68,13 @@ Dashboard/
 * Criação das tabelas: usuário, categoria e chamado no banco
 * Criação do Enum para o status da classe Chamado
 
+### Dia 04 — Implementação da Camada de API
+
+#### Atividades realizadas
+
+* Criação dos Controllers para Usuário, Categoria e Chamado
+* Implementação dos endpoints de criação (POST)
+* Integração dos Controllers com os Services através de Injeção de Dependência
+* Implementação da comunicação entre API, camada de serviços e banco de dados
+* Validação do fluxo completo utilizando o Scalar
+
