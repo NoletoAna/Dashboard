@@ -1,6 +1,7 @@
 ﻿using Dashboard.Data;
 using Dashboard.DTOs;
 using Dashboard.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dashboard.Services
 {
@@ -16,6 +17,11 @@ namespace Dashboard.Services
 
             _context.Usuarios.Add(novoUsuario);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Usuario>> BuscarTodosAsync()
+        {
+            return await _context.Usuarios.ToListAsync();
         }
     }
 }
