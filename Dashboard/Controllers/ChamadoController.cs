@@ -1,10 +1,19 @@
+using Dashboard.DTOs;
 using Dashboard.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dashboard.Controllers
 {
-    public class ChamadoController() : ControllerBase
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ChamadoController(ChamadoService chamadoService) : ControllerBase
     {
+        [HttpPost]
+        public async Task<IActionResult> Criar(ChamadoDTO chamado)
+        {
+            await chamadoService.CriarAsync(chamado);
+            return Ok();
+        }
 
     }
 }

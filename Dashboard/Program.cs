@@ -1,4 +1,5 @@
 using Dashboard.Data;
+using Dashboard.Services;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
@@ -19,6 +20,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<CategoriaService>();
+builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<ChamadoService>();
 
 var app = builder.Build();
 
